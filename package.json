@@ -1,0 +1,73 @@
+{
+  "name": "bip48-multisig",
+  "version": "0.0.0",
+  "description": "TypeScript/JavaScript library for deriving BIP-48 multisig (P2WSH) addresses and output descriptors.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marsu-dev/bip48-multisig.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marsu-dev/bip48-multisig/issues"
+  },
+  "homepage": "https://github.com/marsu-dev/bip48-multisig#readme",
+  "author": "MarsuDev <mmarsu@gmail.com>",
+  "license": "ISC",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "dev": "vitest",
+    "test": "vitest run",
+    "lint": "eslint . --ext .ts,.js --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "build": "tsc -p tsconfig.json",
+    "build:watch": "tsc -w -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "bitcoin",
+    "bip48",
+    "multisig",
+    "descriptor",
+    "psbt",
+    "zpub",
+    "vpub",
+    "signet"
+  ],
+  "dependencies": {
+    "@bitcoinerlab/secp256k1": "^1.1.1",
+    "bip32": "^4.0.0",
+    "bip39": "^3.1.0",
+    "bitcoinjs-lib": "^6.1.5",
+    "bs58check": "^3.0.1",
+    "tiny-secp256k1": "^2.2.4"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/node": "^22.18.0",
+    "@typescript-eslint/eslint-plugin": "^8.41.0",
+    "@typescript-eslint/parser": "^8.41.0",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2",
+    "typescript": "^5.5.4",
+    "vitest": "^3.2.4"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  }
+}
