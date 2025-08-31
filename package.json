@@ -1,6 +1,6 @@
 {
   "name": "bip48-multisig",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "TypeScript/JavaScript library for deriving BIP-48 multisig (P2WSH) addresses and output descriptors.",
   "repository": {
     "type": "git",
